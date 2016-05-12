@@ -1,0 +1,32 @@
+{
+  "name": "search-hint",
+  "version": "1.0.0",
+  "description": "jQuery plugin for search hinting",
+  "main": "dist/jquery.searchHint.min.js",
+  "scripts": {
+    "build": "cp src/jquery.searchHint.js dist/jquery.searchHint.js && uglifyjs dist/jquery.searchHint.js --output dist/jquery.searchHint.min.js"
+  },
+  "contributors": [
+    {
+      "name": "Westley Mon",
+      "email": "mon@westleymon.com",
+      "url": "http://westleymon.com/"
+    }
+  ],
+  "devDependencies": {
+    "uglify-js": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mindgruve/searchHint.git"
+  },
+  "keywords": [
+    "search",
+    "hint",
+    "hinting",
+    "autocomplete",
+    "suggestion"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mindgruve/searchHint#readme"
+}
