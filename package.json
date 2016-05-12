@@ -2,7 +2,7 @@
   "name": "search-hint",
   "version": "1.0.0",
   "description": "jQuery plugin for search hinting",
-  "main": "dist/jquery.searchHint.min.js",
+  "main": "dist/jquery.searchHint.js",
   "scripts": {
     "build": "cp src/jquery.searchHint.js dist/jquery.searchHint.js && uglifyjs dist/jquery.searchHint.js --output dist/jquery.searchHint.min.js"
   },
