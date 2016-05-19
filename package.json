@@ -1,6 +1,6 @@
 {
   "name": "search-hint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "jQuery plugin for search hinting",
   "main": "dist/jquery.searchHint.js",
   "scripts": {

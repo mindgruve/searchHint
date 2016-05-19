@@ -19,7 +19,7 @@
      * SearchHint - shows suggested keywords when a user is searching.
      *
      * @author Westley Mon <wmarchment@mindgruve.com>
-     * @version 1.0.0
+     * @version 1.0.1
      *
      * @param {jQuery} element jQuery instance of selected elements
      * @param {SearchHintOptions} options Custom options will be merged with the defaults
