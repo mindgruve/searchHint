@@ -133,7 +133,7 @@
 
         processInput: function(val) {
             var _this = this;
-            var letter = val.charAt(0);
+            var letter = val.charAt(0).toLowerCase();
             var _terms;
 
             if (letter == '') {
