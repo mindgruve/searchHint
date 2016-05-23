@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Hint Demo</title>
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.material-design/0.5.9/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.material-design/0.5.9/css/ripples.min.css">
+    <style>
+        <!--
+            body {
+                text-align: center;
+            }
+
+            .search-hint {
+                border: 1px solid #ccc;
+                font-size: 16px;
+                height: 30px;
+                position: relative;
+                margin: auto;
+                max-width: 300px;
+                text-align: left;
+            }
+
+            .search-hint span,
+            .search-hint input {
+                background-color: transparent;
+                border: 0;
+                bottom: 0;
+                color: #000;
+                display: block;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                z-index: 2;
+
+            }
+
+            .search-hint span {
+                color: #ccc;
+                left: 1px;
+                top: 1px;
+                z-index: 1;
+            }
+
+            /* adjust for webkit rending the input a bit different */
+            @media screen and (-webkit-min-device-pixel-ratio: 0) {
+                .search-hint span {
+                    left: 1px;
+                    top: 5px;
+                }
+            }
+        -->
+    </style>
+</head>
+<body>
+<h1>
+    Search Hint Demo
+</h1>
+<p>For the sake of this example and saving time... Only search for words starting with A, B, or C.</p>
+
+<form action="">
+    <label for="search">
+        Search by typing
+    </label>
+
+    <div>
+        <div class="search-hint">
+            <span></span>
+            <input type="search" id="search" autocomplete="off">
+        </div>
+        <button type="submit" class="btn-primary btn">Search</button>
+
+    </div>
+</form>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../dist/jquery.searchHint.js"></script>
+<script type="text/javascript">
+    $(function() { //shorthand for on doc ready
+        var $this  = $('.search-hint'),
+            $input = $this.find('input'),
+            $span  = $this.find('span');
+
+        $input.searchHint({
+            suggestionBox: $span,
+            termDictionaryUrl: 'demos/results.php'
+        });
+    });
+</script>
+</body>
+</html>
