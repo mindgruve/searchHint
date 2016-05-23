@@ -22,6 +22,27 @@ Download the [production version][min] or the [development version][max].
 
 ## Documentation
 
+### Options
+
+| Property  | Default | Required | Description |
+|---|---|---|---|
+| `suggestionBox`  | `null` | Yes | An element to display the suggestion |
+| `termDictionaryUrl`  | `null` | Yes | Url to provide the results |
+| `dataType`  | `json` | No | Type of data the Ajax call can expect |
+
+### Fetching Results
+
+The script expects to hit an endpoint that returns JSON encoded results.  It looks for a key called `terms` which contains an Array of all terms associated with the first letter of the search query.
+
+```javascript
+{"id":"a","terms":["ant","apple","art"]}
+```
+
+The `termDictionaryUrl` takes the given URL and appends a query string to it, i.e.: `?letter=a`.  The endpoint can be setup with a simple switch based on the query string.  See `demos/results.php` for reference.
+
+**Suggestions are shown to the user in the order of which the terms are in the array. Add weight to which terms show up first by ordering the array accordingly.**
+
+### Styling
 Some CSS styling is to reach various desired effects.  Reference the demo, or style it as desired.
 
 ```css
@@ -67,26 +88,6 @@ Some CSS styling is to reach various desired effects.  Reference the demo, or st
 }
 
 ```
-
-### Options
-
-| Property  | Default | Required | Description |
-|---|---|---|---|
-| `suggestionBox`  | `null` | Yes | An element to display the suggestion |
-| `termDictionaryUrl`  | `null` | Yes | Url to provide the results |
-| `dataType`  | `json` | No | Type of data the Ajax call can expect |
-
-### Fetching Results
-
-The script expects to hit an endpoint that returns JSON encoded results.  It looks for a key called `terms` which contains an Array of all terms associated with the first letter of the search query.
-
-```javascript
-{"id":"a","terms":["ant","apple","art"]}
-```
-
-The `termDictionaryUrl` takes the given URL and appends a query string to it, i.e.: `?letter=a`.  The endpoint can be setup with a simple switch based on the query string.  See `demos/results.php` for reference.
-
-**Suggestions are shown to the user in the order of which the terms are in the array. Add weight to which terms show up first by ordering the array accordingly.**
 
 ### Examples
 See `demos/index.html`
