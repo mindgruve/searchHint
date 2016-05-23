@@ -96,5 +96,5 @@ To see it in action, download this package, run PHP's  built-in web server in th
 *For the sake of this example and saving time... Only search for words starting with A, B, or C.*
 
 ### Roadmap
-- Add support for manipulation of endpoint results
+- Add support for overriding the manipulation of endpoint results
 - Add ability to use a different URL structure for endpoint
